@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <main>
       <CSVReader
-        onUploadAccepted={(results: any) => {
+        onUploadAccepted={(results) => {
           console.log('---------------------------');
           console.log(results);
           console.log('---------------------------');
@@ -114,7 +114,7 @@ export default function Home() {
           ProgressBar,
           getRemoveFileProps,
           Remove,
-        }: any) => (
+        }) => (
           <>
             <div
               {...getRootProps()}
@@ -139,11 +139,11 @@ export default function Home() {
                     <div
                       {...getRemoveFileProps()}
                       style={styles.remove}
-                      onMouseOver={(event: Event) => {
+                      onMouseOver={(event) => {
                         event.preventDefault();
                         setRemoveHoverColor(REMOVE_HOVER_COLOR_LIGHT);
                       }}
-                      onMouseOut={(event: Event) => {
+                      onMouseOut={(event) => {
                         event.preventDefault();
                         setRemoveHoverColor(DEFAULT_REMOVE_HOVER_COLOR);
                       }}
